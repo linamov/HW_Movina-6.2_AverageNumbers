@@ -6,6 +6,7 @@ button.addEventListener("click", () => {
 
   if (input === null || input.trim() === "") {
     resultDiv.innerText = "⚠️ You must enter something!";
+    resultDiv.style.display = "inline-block";
     return;
   }
 
@@ -35,4 +36,6 @@ button.addEventListener("click", () => {
   } else {
     resultDiv.innerText = "✅ Average: " + (Math.round(avg * 100) / 100);
   }
+
+  resultDiv.style.display = "inline-block"; // робимо блок видимим після обробки
 });
