@@ -4,9 +4,10 @@ const resultDiv = document.getElementById("result");
 button.addEventListener("click", () => {
   const input = prompt("Enter elements separated by commas (e.g. 2, hello, 3.5, true):");
 
+  resultDiv.style.display = "inline-block";
+
   if (input === null || input.trim() === "") {
     resultDiv.innerText = "⚠️ You must enter something!";
-    resultDiv.style.display = "inline-block";
     return;
   }
 
@@ -36,6 +37,4 @@ button.addEventListener("click", () => {
   } else {
     resultDiv.innerText = "✅ Average: " + (Math.round(avg * 100) / 100);
   }
-
-  resultDiv.style.display = "inline-block"; // робимо блок видимим після обробки
 });
